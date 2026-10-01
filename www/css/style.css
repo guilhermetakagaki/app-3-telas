@@ -1,0 +1,29 @@
+/* Ajustes visuais simples além do que o Ionic já traz pronto */
+
+ion-content h2 {
+  margin-top: 0;
+}
+
+ion-content p {
+  color: var(--ion-color-medium-shade);
+  line-height: 1.5;
+}
+
+ion-button {
+  margin-top: 12px;
+}
+
+/* Contador (mesmos botões e cores do Ionic, só o alinhamento) */
+.counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.counter-value {
+  min-width: 48px;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+}

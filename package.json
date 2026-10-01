@@ -1,0 +1,12 @@
+{
+  "name": "app-3-telas",
+  "version": "1.0.0",
+  "description": "Navegacao entre 3 telas com Ionic + Capacitor",
+  "dependencies": {
+    "@capacitor/android": "^8.5.2",
+    "@capacitor/core": "^8.5.2"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^8.5.2"
+  }
+}

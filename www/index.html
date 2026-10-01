@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Navegação com Ionic</title>
+
+  <!-- Ionic Core: os web components do Ionic -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@7/css/ionic.bundle.css" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@7/dist/ionic/ionic.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@7/dist/ionic/ionic.js"></script>
+</head>
+<body>
+
+  <ion-app>
+    <!--
+      ion-router / ion-route: é o roteador do próprio Ionic Core, feito para
+      funcionar SEM nenhum framework. Ele usa a History API do navegador por
+      baixo dos panos, então o gesto e o botão de voltar do Android já
+      funcionam automaticamente, sem código extra.
+
+      use-hash="true" faz as rotas usarem "#/perfil" em vez de "/perfil".
+      Isso evita telas em branco caso o WebView tente recarregar a página
+      estando em uma sub-rota (não existe servidor para responder por essa
+      rota "de verdade").
+    -->
+    <ion-router use-hash="true">
+      <ion-route url="/" component="page-home"></ion-route>
+      <ion-route url="/perfil" component="page-perfil"></ion-route>
+      <ion-route url="/config" component="page-config"></ion-route>
+    </ion-router>
+
+    <!-- ion-router-outlet é onde o Ionic desenha a página ativa e controla a pilha de navegação -->
+    <ion-router-outlet id="main-outlet"></ion-router-outlet>
+  </ion-app>
+
+  <script src="js/counter.js"></script>
+  <script src="js/pages/page-home.js"></script>
+  <script src="js/pages/page-perfil.js"></script>
+  <script src="js/pages/page-config.js"></script>
+  <script src="js/gestos.js"></script>
+</body>
+</html>
